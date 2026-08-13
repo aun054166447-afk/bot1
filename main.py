@@ -269,16 +269,16 @@ PAID USER ဖြစ်ရန် အောက်ပါ Menu မှ PAID USER က�
         await bot.answer_callback_query(call.id)
         return
     
-    if call.data == "menu_free_trial":
-        if user_id not in paid_users and user_id not in approve:
+            if user_id not in paid_users and user_id not in approve:
             await bot.edit_message_text(
                 chat_id=chat_id,
                 message_id=call.message.message_id,
-                text=f"❌ သင်၏ user ID ကို registered မလုပ်ရသေးပါ။\n\nPAID USER ဖြစ်ရန် Admin {ADMIN_USERNAME} သို့ ဆက်သွယ်ပါ။",
+                text=f"❌ သင့်၏ user ID ကို registered မလုပ်ရသေးပါဘူး။\n\nPAID USER ဖြစ်ရန် Admin {ADMIN_USERNAME} သို့ ဆက်သွယ်ပါ။",
                 reply_markup=get_back_keyboard()
             )
             await bot.answer_callback_query(call.id)
             return
+
         
         text = f"""🔗 Portal URL ထည့်သွင်းရန်:
 
